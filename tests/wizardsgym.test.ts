@@ -20,6 +20,8 @@ test.describe("Wizards Gym", () => {
         await wizardsGym.wizardsGymTitle();
         await wizardsGym.backToMainClick();
 
+        console.log('Wizards Gym Page Test Passed!'); 
+
 
     });
 

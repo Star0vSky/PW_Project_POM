@@ -45,7 +45,7 @@ export class AdventurePage {
         await this.DESCRIPTION_QUEST.fill(questDescription);
     }
 
-    async cmplexityLevelSelection(label: string) {
+    async complexityLevelSelection(label: string) {
         await this.COMPLEXITY_LEVEL.selectOption({ label });
     }
 

@@ -8,7 +8,7 @@ export class MainPage {
     readonly NAME_INPUT_BOX: Locator;
     private enteredName: string | null = null;
     readonly EMAIL_INPUT_BOX: Locator;
-    readonly QA_TRAID_LIST: Locator;
+    readonly QA_TRAIT_LIST: Locator;
     readonly UPLOAD_PORTRAIT: Locator;
     readonly MEMBERSHIP_CALENDAR: Locator;
     readonly SKILL_SLIDER: Locator;
@@ -19,7 +19,7 @@ export class MainPage {
     readonly POPUP_GUILD_MESSAGE: Locator;
     readonly GUILD_OK_BUTTON: Locator;
     readonly IMPROVE_SKILLS: Locator;
-    readonly WORNING_MISSING_FIELD: Locator;
+    readonly WARNING_MISSING_FIELD: Locator;
     readonly OK_BUTTON: Locator;
     readonly START_ADVENTURE: Locator;
 
@@ -29,7 +29,7 @@ export class MainPage {
         this.page = page;
         this.NAME_INPUT_BOX = this.page.getByTestId('name-input');
         this.EMAIL_INPUT_BOX = this.page.getByTestId('email-input');
-        this.QA_TRAID_LIST = this.page.getByTestId('superpower-select');
+        this.QA_TRAIT_LIST = this.page.getByTestId('superpower-select');
         this.UPLOAD_PORTRAIT = this.page.getByTestId('photo-upload');
         this.MEMBERSHIP_CALENDAR = this.page.getByTestId('date-input');
         this.SKILL_SLIDER = this.page.getByTestId('level-range');
@@ -39,7 +39,7 @@ export class MainPage {
         this.POPUP_GUILD_MESSAGE = this.page.getByTestId('info-dialog');
         this.GUILD_OK_BUTTON = this.page.getByTestId('close-info-button');
         this.IMPROVE_SKILLS = this.page.getByTestId('improve-skills-button');
-        this.WORNING_MISSING_FIELD = this.page.getByText('By the decree of the Guildmaster');
+        this.WARNING_MISSING_FIELD = this.page.getByText('By the decree of the Guildmaster');
         this.START_ADVENTURE = this.page.getByTestId('start-quest-button');
 
 
@@ -59,7 +59,7 @@ export class MainPage {
     }
 
     async selectQaTraits(label: string) {
-        await this.QA_TRAID_LIST.selectOption({ label });
+        await this.QA_TRAIT_LIST.selectOption({ label });
     }
 
     async allegianceRadio(optionText: string) {
@@ -88,7 +88,7 @@ export class MainPage {
         }
     }
 
-    async drugDropNewPortrait(text: string) {
+    async dragDropNewPortrait(text: string) {
         const newPortrait = this.page.locator(text);
         await newPortrait.dragTo(this.DRAG_DROP_BOX);
     }
@@ -104,10 +104,10 @@ export class MainPage {
     }
 
     async alertNotVisible() {
-        await expect(this.WORNING_MISSING_FIELD).not.toBeVisible();
+        await expect(this.WARNING_MISSING_FIELD).not.toBeVisible();
     }
 
-    async guildInforClick() {
+    async guildInfoClick() {
         await this.GUILD_INFO_BUTTON.click();
         await expect(this.POPUP_GUILD_MESSAGE).toBeVisible();
         await this.GUILD_OK_BUTTON.click();

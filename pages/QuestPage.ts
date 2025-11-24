@@ -76,7 +76,7 @@ export class QuestPage {
         await expect(this.TITLE_QUEST).toBeVisible();
     }
 
-    async descriptionTitletIsVisible() {
+    async descriptionTitleIsVisible() {
         await expect(this.QUEST_DESCRIPTION_TITLE).toBeVisible();
     }
 
@@ -92,7 +92,7 @@ export class QuestPage {
         await expect(this.QA_WARRIORS_TITLE).toBeVisible();
     }
 
-    async rewardsTitletIsVisible() {
+    async rewardsTitleIsVisible() {
         await expect(this.REWARDS_TITLE).toBeVisible();
     }
 
@@ -131,7 +131,7 @@ export class QuestPage {
 
     }
 
-    async progressBarVictiryAlertIsPopedUp(repeat: number) {
+    async progressBarVictoryAlertIsPoppedUp(repeat: number) {
         for (let i = 0; i < repeat; i++) {
             await this.FIX_BUG_BUTTON.click();
 
@@ -141,7 +141,7 @@ export class QuestPage {
         await this.OK_ACTION_WARNING_BUTTON.click();
     }
 
-    async progressBarFailureAlertIsPopedUp(repeat: number) {
+    async progressBarFailureAlertIsPoppedUp(repeat: number) {
         for (let i = 0; i < repeat; i++) {
             await this.FIND_BUG_BUTTON.click();
 
@@ -196,7 +196,7 @@ export class QuestPage {
         await expect(this.page.locator('#honorCount', { hasText: result })).toBeVisible();    
     }
 
-    async customWrongActionAlertIsPopedUp() {
+    async customWrongActionAlertIsPoppedUp() {
         await expect(this.CUSTOM_ACTION_BOX).toBeVisible();
         await expect(this.NOT_VALID_ACTION_WARNING).not.toBeVisible();
         await this.SUBMIT_BUTTON.click();
@@ -204,7 +204,7 @@ export class QuestPage {
         await this.OK_ACTION_WARNING_BUTTON.click();
     }
 
-    async customValidgActionAlertIsPopedUp(action: string) {
+    async customValidActionAlertIsPoppedUp(action: string) {
         await expect(this.CUSTOM_ACTION_BOX).toBeVisible();
         await expect(this.NOT_VALID_ACTION_WARNING).not.toBeVisible();
         await expect(this.VALID_ACTION_WARNING).not.toBeVisible();

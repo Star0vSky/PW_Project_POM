@@ -15,11 +15,11 @@ test.describe("Quest page tests", () => {
 
     // All titles are visible.
         await questPage.titleQuestIsVisible();
-        await questPage.descriptionTitletIsVisible();
+        await questPage.descriptionTitleIsVisible();
         await questPage.descriptionTextIsVisible();
         await questPage.progressTitleIsVisible();
         await questPage.warriorsTitleIsVisible();
-        await questPage.rewardsTitletIsVisible();
+        await questPage.rewardsTitleIsVisible();
     // The warriors are visible.
         await questPage.firstWarriorIsVisible();
         await questPage.secondWarriorIsVisible();
@@ -30,8 +30,8 @@ test.describe("Quest page tests", () => {
         await questPage.dayOffPicIsVisible();
     // Progress tracking.
         await questPage.progressBarIsVisible();
-        await questPage.progressBarVictiryAlertIsPopedUp(7);
-        await questPage.progressBarFailureAlertIsPopedUp(10);
+        await questPage.progressBarVictoryAlertIsPoppedUp(7);
+        await questPage.progressBarFailureAlertIsPoppedUp(10);
     // Action Buttons Functionality.
         await questPage.actionButtonsAreVisible();
         await questPage.fixFindButtonProgress();
@@ -39,9 +39,9 @@ test.describe("Quest page tests", () => {
         await questPage.artifactButtonStep(4, '4');
         await questPage.daysOffButtonStep(15, '75');
     // Custom Action Check.
-        await questPage.customWrongActionAlertIsPopedUp();
-        await questPage.customValidgActionAlertIsPopedUp('Error detection');
-        console.log('E2E Quest Page Test Is Passed!')
+        await questPage.customWrongActionAlertIsPoppedUp();
+        await questPage.customValidActionAlertIsPoppedUp('Error detection');
+        console.log('E2E Quest Page Test Passed!')
 
     });
 

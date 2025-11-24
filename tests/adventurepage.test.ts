@@ -19,7 +19,7 @@ test.describe("Adventure page tests", () => {
         await adventurePage.alertVisibleAdventure();
         await adventurePage.fillQuestName('E2E Adventure Test');
         await adventurePage.fillQuestDescription('Scenario Of Adventure');
-        await adventurePage.cmplexityLevelSelection('Test Ninja');
+        await adventurePage.complexityLevelSelection('Test Ninja');
         await adventurePage.questTypeRadio('Regression Battle');
         await adventurePage.fillExecutionDuration('ArrowUp', 7);
         await adventurePage.rewardTypeSelection('Legendary Debugging Tool');
@@ -29,7 +29,7 @@ test.describe("Adventure page tests", () => {
         
         const questPage = await adventurePage.embarkOnTestingClick();
         await questPage.titleQuestIsVisible();
-        console.log('E2E Adventure Page Test Is Passed!');
+        console.log('E2E Adventure Page Test Passed!');
 
     });
 
