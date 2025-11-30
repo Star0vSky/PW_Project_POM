@@ -48,20 +48,20 @@ npx playwright show-report
 
 ```text
 /pages
-    MainPage.ts         # Main page: simulate user registration, form filling, start adventure
-    AdventurePage.ts    # Adventure page: configure demo quests
-    QuestPage.ts        # Quest page: simulate completing quests and tracking progress
-    WizardsGym.ts       # Wizards Gym: simulate training character skills
+    MainPage.ts         - Main page: simulate user registration, form filling, start adventure
+    AdventurePage.ts    - Adventure page: configure demo quests
+    QuestPage.ts        - Quest page: simulate completing quests and tracking progress
+    WizardsGym.ts       - Wizards Gym: simulate training character skills
 /tests
     mainpage.test.ts
     adventurepage.test.ts
     questpage.test.ts
     wizardsgym.test.ts
 /resources
-    Dwarf_04.jpg        # Demo avatar images for testing file uploads
-playwright.config.ts    # Playwright configuration and Base URL for demo tests
-config.ts               # URL for Quest Page
-README.md               # This file
+    Dwarf_04.jpg        - Demo avatar images for testing file uploads
+playwright.config.ts    - Playwright configuration and Base URL for demo tests
+config.ts               - URL for Quest Page
+README.md               - This file
 ```
 
 ## What is Tested
